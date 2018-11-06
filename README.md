@@ -21,3 +21,11 @@ heroku config:set REACT_APP_EDM_RELAY_BACKEND_HOST=<hostname of your edm-relay a
 ```
 git push heroku master
 ```
+
+## Scale Up
+
+Scale up your service to avoid sleeping dynos.
+
+```
+heroku ps:scale web=1:standard-1x
+```
