@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { API_ROOT } from './api-config';
 
+
 class Home extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      testvar1: null
+      uuid: this.props.uuid
     };
     this.produceClickMessage = this.produceClickMessage.bind(this);
   }
@@ -15,6 +16,7 @@ class Home extends Component {
   formatMessage(topic, properties) {
     const json = {
       "topic": topic,
+      "uuid": this.props.uuid,
       "event_timestamp": Date.now(),
       "properties": properties
     }

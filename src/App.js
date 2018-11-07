@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Home from './Home.js';
 import './App.css';
+import uuidv1 from 'uuid/v1';
 
 class App extends Component {
   render() {
@@ -15,7 +16,7 @@ class App extends Component {
             </ul>
           </nav>
         </div>
-        <Home/>
+        <Home uuid={uuidv1()}/>
       </div>
     );
   }
