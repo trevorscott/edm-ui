@@ -11,7 +11,10 @@ class Home extends Component {
       uuid: this.props.uuid
     };
     this.produceClickMessage = this.produceClickMessage.bind(this);
-  }
+  } 
+
+
+
 
   formatMessage(topic, properties) {
     const json = {
@@ -186,16 +189,16 @@ class Home extends Component {
               <li><span href="#" id="contact-us" onClick={this.produceClickMessage}>Contact Us</span></li>
             </ul>
             <ul className="social-links">
-              <li><span id="twitter" href="#" onClick={this.produceClickMessage}>
-                  <img className="social-logo" src="images/social/twitter.png" alt="twitter" />
+              <li><span>
+                  <img id="twitter" className="social-logo" src="images/social/twitter.png" alt="twitter" onClick={this.produceClickMessage} />
                   <span className="social-verb">Follow on</span>
                   <span className="social-name">Twitter</span></span></li>
-              <li><span id="facebook" href="#" onClick={this.produceClickMessage}>
-                  <img className="social-logo" src="images/social/facebook.png" alt="facebook" />
+              <li><span  >
+                  <img id="facebook" className="social-logo" src="images/social/facebook.png" alt="facebook" onClick={this.produceClickMessage} />
                   <span className="social-verb">Like Us on</span>
                   <span className="social-name">Facebook</span></span></li>
-              <li><span id="instagram" href="#" onClick={this.produceClickMessage}>
-                  <img className="social-logo" src="images/social/instagram.png" alt="instagram" />
+              <li><span>
+                  <img id="instagram" className="social-logo" src="images/social/instagram.png" alt="instagram" onClick={this.produceClickMessage} />
                   <span className="social-verb">Follow on</span>
                   <span className="social-name">Instagram</span></span></li>
             </ul>
