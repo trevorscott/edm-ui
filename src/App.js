@@ -11,7 +11,7 @@ class App extends Component {
           <nav>
             <ul>
               <li>
-                <a className="link" href="#">Go to Dashboard</a>
+                <a className="link" href="https://edm-dashboard.herokuapp.com" target="_blank">Go to Dashboard</a>
               </li>
             </ul>
           </nav>
