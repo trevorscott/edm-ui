@@ -13,9 +13,6 @@ class Home extends Component {
     this.produceClickMessage = this.produceClickMessage.bind(this);
   } 
 
-
-
-
   formatMessage(topic, properties) {
     const json = {
       "topic": topic,
@@ -51,7 +48,6 @@ class Home extends Component {
       console.log(res);
       return res;
     }, function(error) {
-      // if not successful, retry
       console.error(error.message); //=> String
     })
   }
@@ -102,7 +98,6 @@ class Home extends Component {
               <span className="logo-text">Fine Coffee Kits</span>
             </div>
             <div className="element-right">
-              {/*<a class="btn btn-default" href="#">Cart</a>*/}
             </div>
           </div>
           <div className="masthead-elements-row-2">
