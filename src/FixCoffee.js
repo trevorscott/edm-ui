@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { API_ROOT } from './api-config';
 
 
-class Home extends Component {
+export default class FixCoffee extends Component {
 
   constructor(props) {
     super(props);
@@ -203,5 +203,3 @@ class Home extends Component {
     );
   }
 }
-
-export default Home;

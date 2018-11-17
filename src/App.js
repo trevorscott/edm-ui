@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Home from './Home.js';
+import FixCoffee from './FixCoffee.js';
 import './App.css';
 import uuidv1 from 'uuid/v1';
 
@@ -16,7 +16,7 @@ class App extends Component {
             </ul>
           </nav>
         </div>
-        <Home uuid={uuidv1()}/>
+        <FixCoffee uuid={uuidv1()}/>
       </div>
     );
   }
