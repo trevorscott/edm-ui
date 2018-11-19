@@ -1,9 +1,7 @@
-import { API_ROOT } from './api-config';
-
 let defaultClickTopicName;
 let defaultPageLoadTopicName;
 
-if(API_ROOT == "http://localhost:5000") {
+if(process.env.NODE_ENV == "development") {
   defaultClickTopicName = 'edm-ui-click-local'
   defaultPageLoadTopicName = 'edm-ui-pageload-local'
 } else {
