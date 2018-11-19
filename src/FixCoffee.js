@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { API_ROOT } from './api-config';
+import { CLICK_KAFKA_TOPIC, PAGE_LOAD_KAFKA_TOPIC } from './kafka-topics.js';
 
 
 export default class FixCoffee extends Component {
@@ -31,7 +32,7 @@ export default class FixCoffee extends Component {
     }
 
     // format message
-    const msg = this.formatMessage("edm-ui-click", properties);
+    const msg = this.formatMessage(CLICK_KAFKA_TOPIC, properties);
 
     // send message
     fetch(`${API_ROOT}/produceClickMessage`, {
@@ -43,12 +44,11 @@ export default class FixCoffee extends Component {
         'Content-Type': 'application/json',
       }
     }).then(function(response) {
-      // make sure you get a successful response
       const res = response.json();
       console.log(res);
       return res;
     }, function(error) {
-      console.error(error.message); //=> String
+      console.error(error.message);
     })
   }
 
@@ -60,7 +60,7 @@ export default class FixCoffee extends Component {
     }
 
     // format message
-    const msg = this.formatMessage("edm-ui-pageload", properties);
+    const msg = this.formatMessage(PAGE_LOAD_KAFKA_TOPIC, properties);
 
     // send message
     fetch(`${API_ROOT}/producePageLoad`, {
@@ -72,13 +72,11 @@ export default class FixCoffee extends Component {
         'Content-Type': 'application/json',
       }
     }).then(function(response) {
-      // make sure you get a successful response
       const res = response.json();
       console.log(res);
       return res;
     }, function(error) {
-      // if not successful, retry
-      console.error(error.message); //=> String
+      console.error(error.message); 
     })
   }
 
