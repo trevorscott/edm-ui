@@ -17,8 +17,6 @@ git clone git@github.com:trevorscott/edm-ui.git && cd edm-ui
 heroku create $app_name
 heroku buildpacks:set mars/create-react-app
 heroku config:set REACT_APP_EDM_RELAY_BACKEND_HOST=<hostname of your edm-relay app>
-heroku config:set REACT_APP_CLICK_KAFKA_TOPIC=<name of your kafka topic for button clicks>
-heroku config:set REACT_APP_PAGE_LOAD_KAFKA_TOPIC=<name of your kafka topic for page loads>
 ```
 
 ```
@@ -31,4 +29,28 @@ Scale up your service to avoid sleeping dynos.
 
 ```
 heroku ps:scale web=1:standard-1x
+```
+
+## Local Dev
+
+```
+npm start
+```
+
+## Custom Kafka Topic Names
+
+If you deviated from the default kafka topic names for this demo you will need to set some extra config:
+
+Production:
+
+```bash
+heroku config:set REACT_APP_CLICK_KAFKA_TOPIC=<name of your kafka topic for button clicks>
+heroku config:set REACT_APP_PAGE_LOAD_KAFKA_TOPIC=<name of your kafka topic for page loads>
+```
+
+local:
+
+```bash
+export REACT_APP_CLICK_KAFKA_TOPIC=<name of your kafka topic for button clicks>
+export REACT_APP_PAGE_LOAD_KAFKA_TOPIC=<name of your kafka topic for page loads>
 ```
