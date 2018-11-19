@@ -34,6 +34,7 @@ heroku ps:scale web=1:standard-1x
 ## Local Dev
 
 ```
+npm install
 npm start
 ```
 
