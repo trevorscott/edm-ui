@@ -14,7 +14,7 @@ This app is part of a group of apps that all must be deployed in a particular or
 ## Setup
 ```
 git clone git@github.com:trevorscott/edm-ui.git && cd edm-ui
-heroku create $app_name
+heroku create $appName
 heroku buildpacks:set mars/create-react-app
 heroku config:set REACT_APP_EDM_RELAY_BACKEND_HOST=https://<edm-relay-app_name>.herokuapp.com
 ```
