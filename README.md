@@ -44,13 +44,13 @@ If you deviated from the default kafka topic names for this demo you will need t
 Production:
 
 ```bash
-heroku config:set REACT_APP_CLICK_KAFKA_TOPIC=<name of your kafka topic for button clicks>
-heroku config:set REACT_APP_PAGE_LOAD_KAFKA_TOPIC=<name of your kafka topic for page loads>
+heroku config:set REACT_APP_CLICK_KAFKA_TOPIC=<custom-clicks-kafka-topic-name>
+heroku config:set REACT_APP_PAGE_LOAD_KAFKA_TOPIC=<custom-pageload-kafka-topic-name>
 ```
 
 local:
 
 ```bash
-export REACT_APP_CLICK_KAFKA_TOPIC=<name of your kafka topic for button clicks>
-export REACT_APP_PAGE_LOAD_KAFKA_TOPIC=<name of your kafka topic for page loads>
+export REACT_APP_CLICK_KAFKA_TOPIC=<custom-clicks-kafka-topic-name-local>
+export REACT_APP_PAGE_LOAD_KAFKA_TOPIC=<custom-pageload-kafka-topic-name-local>
 ```
