@@ -11,11 +11,5 @@ if(API_ROOT == "http://localhost:5000") {
   defaultPageLoadTopicName = 'edm-ui-pageload'
 }
 
-const CLICK_KAFKA_TOPIC     = process.env.REACT_APP_CLICK_KAFKA_TOPIC || defaultClickTopicName;
-const PAGE_LOAD_KAFKA_TOPIC = process.env.REACT_APP_PAGE_LOAD_KAFKA_TOPIC || defaultPageLoadTopicName;
-
-
-module.exports = {
-  CLICK_KAFKA_TOPIC,
-  PAGE_LOAD_KAFKA_TOPIC
-}
+export const CLICK_KAFKA_TOPIC     = process.env.REACT_APP_CLICK_KAFKA_TOPIC || defaultClickTopicName;
+export const PAGE_LOAD_KAFKA_TOPIC = process.env.REACT_APP_PAGE_LOAD_KAFKA_TOPIC || defaultPageLoadTopicName;
