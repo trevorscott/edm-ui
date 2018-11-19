@@ -17,6 +17,8 @@ git clone git@github.com:trevorscott/edm-ui.git && cd edm-ui
 heroku create $app_name
 heroku buildpacks:set mars/create-react-app
 heroku config:set REACT_APP_EDM_RELAY_BACKEND_HOST=<hostname of your edm-relay app>
+heroku config:set REACT_APP_CLICK_KAFKA_TOPIC=<name of your kafka topic for button clicks>
+heroku config:set REACT_APP_PAGE_LOAD_KAFKA_TOPIC=<name of your kafka topic for page loads>
 ```
 
 ```
