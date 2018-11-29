@@ -13,6 +13,10 @@ This app is part of a group of apps that all must be deployed in a particular or
 ## Requirements
 1. Heroku Account
 
+## Terraform Deploy
+
+To deploy this entire demo with a single command see [edm-terraform](https://github.com/trevorscott/edm-terraform).
+
 ## Setup
 ```
 git clone git@github.com:trevorscott/edm-ui.git && cd edm-ui
