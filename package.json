@@ -6,6 +6,7 @@
     "react-scripts": "2.0.5"
   },
   "dependencies": {
+    "@mars/heroku-js-runtime-env": "^3.0.2",
     "ajv": "^6.5.4",
     "browserslist": "^4.3.3",
     "react": "^16.4.1",
